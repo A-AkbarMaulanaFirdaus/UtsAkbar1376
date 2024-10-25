@@ -1,0 +1,60 @@
+/* General styling for body and headers */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8faf9;
+}
+
+header {
+  background-image: url("img/header-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-color: #a00000;
+}
+
+header h1 {
+  font-size: 2.5rem;
+}
+
+header p {
+  font-size: 1.2rem;
+}
+
+.table {
+  margin-bottom: 3rem;
+}
+
+/* Styling for features section */
+ul.list-group {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Styling for video section */
+video {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the footer */
+footer {
+  margin-top: 50px;
+}
+button:hover {
+  background-color: #45a049;
+}
+
+.navbar-nav .nav-link {
+  color: white; /* Default link color */
+  transition: color 0.3s ease, background-color 0.3s ease; /* Transition for color and background */
+  padding: 10px 15px; /* Add padding for better click area */
+  border-radius: 4px; /* Rounded corners */
+}
+
+/* Hover effect for navbar links */
+.navbar-nav .nav-link:hover {
+  background-color: rgb(
+    255,
+    255,
+    0
+  ); /* Light transparent background on hover */
+  color: #0175f9; /* Optional: Change link color on hover */
+}

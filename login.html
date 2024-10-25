@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="login-container">
+      <h2>Login</h2>
+      <form id="loginForm">
+        <div class="input-group">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required />
+        </div>
+        <div class="input-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+        <!-- Checkbox for terms and conditions -->
+        <div class="input-group">
+          <input type="checkbox" id="terms" name="terms" />
+          <label for="terms"
+            >Saya setuju dengan syarat dan ketentuan yang berlaku</label
+          >
+        </div>
+        <button type="submit">Login</button>
+        <p id="error-message" class="error-message"></p>
+      </form>
+    </div>
+
+    <script>
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          const username = document.getElementById("username").value;
+          const password = document.getElementById("password").value;
+          const terms = document.getElementById("terms").checked;
+
+          if (!terms) {
+            document.getElementById("error-message").innerText =
+              "Anda harus menyetujui syarat dan ketentuan untuk melanjutkan!";
+          } else if (username === "ahmad akbar" && password === "akbar666") {
+            alert("Login successful!");
+            window.location.href = "indeks.html"; // Redirect to welcome page after successful login
+          } else {
+            document.getElementById("error-message").innerText =
+              "Invalid username or password!";
+          }
+        });
+    </script>
+  </body>
+</html>
